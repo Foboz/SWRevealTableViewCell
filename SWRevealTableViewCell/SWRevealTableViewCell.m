@@ -552,7 +552,12 @@ static const CGFloat OverDrawWidth = 60;
             if ( title.length>0 )
             {
                 // set a custom combined layout if both image and title are given
-                [button.titleLabel setFont:[UIFont preferredFontForTextStyle:UIFontTextStyleFootnote]];
+                if (item.font != nil) {
+                    [button.titleLabel setFont:item.font];
+                } else {
+                    [button.titleLabel setFont:[UIFont preferredFontForTextStyle:UIFontTextStyleFootnote]];
+                }
+              
                 [button setWantsCombinedLayout:YES];
             }
         }
