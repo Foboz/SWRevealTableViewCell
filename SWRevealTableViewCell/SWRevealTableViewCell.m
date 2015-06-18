@@ -571,7 +571,9 @@ static const CGFloat OverDrawWidth = 60;
         }
       
         [button setContentEdgeInsets:item.contentInsets];
-        
+        [button setTitleEdgeInsets:item.titleInsets];
+        [button setImageEdgeInsets:item.imageInsets];
+      
         // set common button properties
         [button setTintColor:tintColor];
         [button setTitle:title forState:UIControlStateNormal];
