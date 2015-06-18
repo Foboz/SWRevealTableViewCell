@@ -193,6 +193,10 @@ const CGFloat CombinedHeigh = 36;
         frame.origin.y = gap;
         frame.size.height = ceil(h*2/3);
     }
+    frame.origin.x += self.item.contentInsets.left + self.item.imageInsets.left;
+    frame.origin.y += self.item.contentInsets.top + self.item.imageInsets.top;
+    frame.size.width += self.item.contentInsets.left - self.item.contentInsets.right;
+    frame.size.height += self.item.contentInsets.top - self.item.contentInsets.bottom;
 
     return frame;
 }
@@ -208,6 +212,10 @@ const CGFloat CombinedHeigh = 36;
         frame.origin.y = gap + floor(h*2/3);
         frame.size.height = ceil(h*1/3);
     }
+    frame.origin.x += self.item.contentInsets.left + self.item.titleInsets.left;
+    frame.origin.y += self.item.contentInsets.top + self.item.titleInsets.top;
+    frame.size.width += self.item.contentInsets.left - self.item.titleInsets.right;
+    frame.size.height += self.item.contentInsets.top - self.item.titleInsets.bottom;
 
     return frame;
 }
