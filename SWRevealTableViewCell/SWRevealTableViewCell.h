@@ -87,6 +87,7 @@
 @property(nonatomic) NSString *title;            // default is nil
 @property(nonatomic) UIVisualEffect *visualEffect;
 @property(nonatomic) UIFont *font;
+@property(nonatomic) UIEdgeInsets contentInsets;
 
 @end
 

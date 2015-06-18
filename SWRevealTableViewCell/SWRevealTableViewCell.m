@@ -569,6 +569,8 @@ static const CGFloat OverDrawWidth = 60;
             [button setImage:highImage forState:UIControlStateHighlighted];
             [button.imageView setContentMode:UIViewContentModeScaleToFill];
         }
+      
+        [button setContentEdgeInsets:item.contentInsets];
         
         // set common button properties
         [button setTintColor:tintColor];
